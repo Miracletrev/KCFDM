@@ -1,0 +1,290 @@
+/* --- Global Styles & Variables --- */
+:root {
+    --primary-color: #2c3e50; /* A deep, trustworthy blue */
+    --secondary-color: #d4af37; /* A warm, elegant gold */
+    --background-color: #fdfdfd;
+    --surface-color: #ffffff;
+    --text-color: #333333;
+    --light-text-color: #fdfdfd;
+    --heading-font: 'Merriweather', serif;
+    --body-font: 'Lato', sans-serif;
+    --box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Lato:wght@400;700&display=swap');
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+    font-family: var(--body-font);
+    line-height: 1.7;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+h1, h2, h3 { font-family: var(--heading-font); font-weight: 700; color: var(--primary-color); }
+
+/* --- Navigation Bar --- */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: var(--surface-color);
+    box-shadow: var(--box-shadow);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    transition: top 0.3s;
+}
+.nav-logo { font-size: 1.8rem; font-weight: bold; color: var(--primary-color); text-decoration: none; }
+.nav-menu { display: flex; list-style: none; gap: 1.8rem; }
+.nav-link { text-decoration: none; color: var(--text-color); font-weight: 700; transition: color 0.3s ease; }
+.nav-link:hover, .nav-link.active { color: var(--secondary-color); }
+.hamburger { display: none; cursor: pointer; }
+.bar { display: block; width: 25px; height: 3px; margin: 5px auto; transition: all 0.3s ease-in-out; background-color: var(--text-color); }
+
+/* --- Hero Section --- */
+.hero-section {
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    /* TIP: Find a high-quality, welcoming image for your church */
+    background: linear-gradient(rgba(44, 62, 80, 0.7), rgba(44, 62, 80, 0.7)), url('../images/church-hero-bg.jpg') no-repeat center center/cover;
+    padding: 0 1rem;
+}
+.hero-content h1 { font-size: 3.2rem; margin-bottom: 0.5rem; color: white; }
+.hero-content .subtitle { font-size: 1.4rem; margin-bottom: 2rem; font-family: var(--body-font); }
+
+/* --- General Section Styling --- */
+.content-section { padding: 5rem 2rem; max-width: 1200px; margin: 0 auto; }
+.content-section-dark { background-color: var(--primary-color); color: var(--light-text-color); padding: 5rem 2rem; }
+.content-section-dark .section-title, .content-section-dark h3 { color: white; }
+.section-title { text-align: center; font-size: 2.5rem; margin-bottom: 3rem; }
+.text-center { text-align: center; margin-top: 2rem; }
+
+/* --- Page Header (for sub-pages) --- */
+.page-header {
+    padding: 8rem 2rem 4rem;
+    text-align: center;
+    background-color: #f4f4f4;
+}
+.page-title { font-size: 3rem; }
+
+/* --- Welcome Section --- */
+.welcome-container { display: flex; align-items: center; gap: 3rem; }
+.welcome-text { flex: 1; }
+.welcome-image img { width: 100%; max-width: 400px; border-radius: 100px; box-shadow: var(--box-shadow); }
+
+/* --- Service Times Section --- */
+.service-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; text-align: center; }
+.service-card { background: rgba(255,255,255,0.1); padding: 2rem; border-radius: 8px; transition: transform 0.3s; }
+.service-card:hover { transform: translateY(-5px); }
+.service-card i { font-size: 3rem; color: var(--secondary-color); margin-bottom: 1rem; }
+
+/* --- Upcoming Event & Countdown --- */
+.event-container { display: flex; align-items: center; gap: 3rem; background: var(--surface-color); padding: 3rem; border-radius: 8px; box-shadow: var(--box-shadow); }
+.event-image { max-width: 40%; border-radius: 8px; }
+.event-details { flex: 1; }
+.countdown-timer { display: flex; gap: 1rem; margin: 1.5rem 0; }
+.countdown-timer div { background: #f4f4f4; padding: 1rem; border-radius: 5px; text-align: center; min-width: 80px; }
+.countdown-timer span { display: block; font-size: 2rem; font-weight: bold; color: var(--primary-color); }
+.countdown-timer p { font-size: 0.9rem; margin: 0; }
+
+/* --- Live Stream Page --- */
+.live-stream-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    background: #000;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+}
+.live-stream-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.live-info { text-align: center; max-width: 800px; margin: 2rem auto 0; }
+.live-info h2 { margin-bottom: 1rem; }
+.live-info .btn, .live-info .btn-secondary { margin: 1rem 0.5rem; }
+
+/* --- Footer --- */
+footer { background-color: var(--primary-color); color: var(--light-text-color); text-align: center; padding-top: 3rem; }
+.footer-content { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
+.footer-content h3 { color: white; }
+.social-links { margin: 1rem 0; }
+.social-links a { color: white; font-size: 1.8rem; margin: 0 0.7rem; transition: color 0.3s ease; }
+.social-links a:hover { color: var(--secondary-color); }
+.footer-bottom { background-color: rgba(0,0,0,0.2); padding: 1rem; margin-top: 2rem; }
+
+/* --- Utility Classes --- */
+.btn {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 700;
+    transition: all 0.3s ease;
+    border: 2px solid var(--secondary-color);
+}
+.btn:hover { background-color: transparent; color: var(--secondary-color); }
+.btn-secondary {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    background-color: transparent;
+    color: var(--primary-color);
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 700;
+    border: 2px solid var(--primary-color);
+    transition: all 0.3s ease;
+}
+.btn-secondary:hover { background-color: var(--primary-color); color: white; }
+.fade-in { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease-out, transform 0.6s ease-out; }
+.fade-in.visible { opacity: 1; transform: translateY(0); }
+
+/* --- Responsive Design --- */
+@media (max-width: 992px) {
+    .welcome-container, .event-container { flex-direction: column; text-align: center; }
+    .event-image { max-width: 100%; }
+    .countdown-timer { justify-content: center; }
+}
+
+@media (max-width: 768px) {
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 5rem; /* Match navbar height */
+        flex-direction: column;
+        background-color: var(--surface-color);
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow: var(--box-shadow);
+    }
+    .nav-menu.active { left: 0; }
+    .nav-item { margin: 1.5rem 0; }
+    .hamburger { display: block; }
+    .hamburger.active .bar:nth-child(2) { opacity: 0; }
+    .hamburger.active .bar:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+    .hamburger.active .bar:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+    .hero-content h1 { font-size: 2.5rem; }
+}
+
+/* --- About Page --- */
+.about-split-container {
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+}
+.about-split-text { flex: 1; }
+.about-split-image { flex: 1; }
+.about-split-image img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: var(--box-shadow);
+}
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+.team-member-card {
+    text-align: center;
+    background: rgba(255,255,255,0.1);
+    padding: 2rem 1rem;
+    border-radius: 8px;
+}
+.team-member-card img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    border: 4px solid var(--secondary-color);
+}
+.team-member-card h3 { color: white; }
+.team-member-card p { font-style: italic; }
+
+/* --- Services Page --- */
+.service-listing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+.service-listing-card {
+    background: var(--surface-color);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: var(--box-shadow);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.service-listing-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+.service-listing-card i {
+    font-size: 3rem;
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+}
+.service-listing-card h4 {
+    color: var(--primary-color);
+    margin: 0.5rem 0;
+}
+
+/* --- Events Page --- */
+.event-listing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+}
+.event-listing-card {
+    background: var(--surface-color);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: var(--box-shadow);
+    display: flex;
+    flex-direction: column;
+}
+.event-listing-card img { width: 100%; height: 200px; object-fit: cover; }
+.event-card-content { padding: 1.5rem; }
+.event-date { font-weight: bold; color: var(--secondary-color); margin-bottom: 0.5rem; }
+
+/* --- Contact Page --- */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: flex-start;
+}
+.contact-form-container input, .contact-form-container textarea {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: var(--body-font);
+}
+.contact-info p { margin-bottom: 1rem; }
+.contact-info i { color: var(--primary-color); margin-right: 10px; }
+.map-container { margin-top: 2rem; border-radius: 8px; overflow: hidden; height: 300px; }
+.map-container iframe { width: 100%; height: 100%; border: 0; }
+
+/* More Responsive Adjustments */
+@media (max-width: 992px) {
+    .about-split-container { flex-direction: column; }
+    .contact-grid { grid-template-columns: 1fr; }
+}

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - KCDM</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Header and Navigation -->
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="nav-logo">KCDM</a>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="about.html" class="nav-link">About Us</a></li>
+                <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
+                <li class="nav-item"><a href="events.html" class="nav-link">Programs</a></li>
+                <li class="nav-item"><a href="live.html" class="nav-link">Watch Live</a></li>
+                <li class="nav-item"><a href="contact.html" class="nav-link active">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Page Header -->
+        <section class="content-section page-header">
+            <h1 class="page-title">Get In Touch</h1>
+            <p>We would love to hear from you. Send us a message or visit us in person.</p>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="content-section fade-in">
+            <div class="contact-grid">
+                <div class="contact-form-container">
+                    <h3>Send a Message</h3>
+                    <!-- TIP: Create a free account on formspree.io and replace "your_form_id" with your actual form ID -->
+                    <form id="contact-form" action="https://formspree.io/f/your_form_id" method="POST">
+                        <input type="text" name="name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <textarea name="message" placeholder="Your Message or Prayer Request" rows="6" required></textarea>
+                        <button type="submit" class="btn">Send Message</button>
+                    </form>
+                </div>
+                <div class="contact-info">
+                    <h3>Our Location</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Kampala-Uganda-Mubende,Kilungi Road </p>
+                    <p><i class="fas fa-phone"></i> (256) 0777087825</p>
+                    <p><i class="fas fa-envelope"></i> contact@kcdm.org</p>
+                    <div class="map-container">
+                        <!-- TIP: Go to Google Maps, find your location, click Share > Embed a map, and copy the src link here -->
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3968.856324409644!2d31.38471539999999!3d0.5482324999999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x17632775a952b455%3A0x153d23306057b754!2skilungi%20cristian%20fallowship!5e1!3m2!1sen!2sug!4v1753995330388!5m2!1sen!2sug" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <h3>Kilungi Christian Deliverence Ministries (KCDM) - 2025</h3>
+             <p> Kampala, Uganda </p>
+            <p> Mubende-Kilungi Road </p>
+            <div class="social-links">
+                <a href="#" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.youtube.com/shorts/9xZyI8ZRlI4" target="_blank" rel="noopener" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                <a href="#" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Kirungi Christian Deliverence Ministries (KCDM). All rights reserved. </p>
+            <p> Powered by MIRACLE TREVIS. </p>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
